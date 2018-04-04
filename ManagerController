@@ -1,0 +1,25 @@
+# CSC340
+
+public class ManagerController{
+   private Managermodel model;
+   private ManagerView view;
+   public  ManagerController(Managermodel model,ManagerView view){
+       this.model=model;
+       this.view=view;
+   }
+   public void setEmployeename(String Ename){
+           model.setEmployeename(Ename);
+}
+   public String getCustomerusername(){
+      return model.getEname();		
+   }
+   public void setEmployeepassword(int Epassword){
+           model.setEmployeepassword(Epassword);
+}    
+   public int getEmployeepassword(){
+      return model.getEpassword();		
+   }
+ public void updateView(){				
+      view.printEmployeeformation(model.getEname(),model.getEpassword());
+   }	
+}
